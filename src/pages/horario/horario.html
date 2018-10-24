@@ -1,0 +1,30 @@
+<!--
+  Generated template for the HorarioPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+  <page-pi></page-pi>
+  <div class="cont_user">
+    <div class="cart"  *ngFor="let day of days">
+      <div class="cart--header">
+        {{ day }}
+      </div>
+      <div class="cart--tbl-header">
+        <div>Edificio</div>
+        <div>Hora</div>
+      </div>
+      
+      <div class="cart--tbl-item" *ngFor="let horario of horarios">
+        <div>I</div>
+        <div>{{ horario }}</div>
+      </div>
+    </div>
+    <!--
+      <ion-item-group *ngFor="let day of days">
+        <ion-item-divider color="light">{{ day }}</ion-item-divider>
+        <ion-item *ngFor="let horario of horarios">{{ horario }}</ion-item>
+      </ion-item-group>
+    -->
+  </div>

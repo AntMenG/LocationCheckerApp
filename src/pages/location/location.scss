@@ -1,0 +1,115 @@
+page-location {    
+  #map_canvas{
+    width: 100%;
+    z-index: -1;
+    display: block;
+    position: relative;
+    margin-bottom: -105px;
+    height: calc(100% - 195px);
+  }
+  .marker {
+    left: 50%;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: calc(50% + 134px);
+    border-radius: 5px 5px;
+    animation: jump 2s infinite;
+    transform: translateX(-50%);
+    box-shadow: 5px 5px 10px 1px rgba(62, 35, 109, 0.4);
+    img {
+      width: 35px;
+      height: 35px;
+      border-radius: 5px 5px;
+    }
+  }
+  .marker:after {
+    left: 50%;
+    width: 0px;
+    height: 0px;
+    content: "";
+    bottom: -13px;
+    position: absolute;
+    border-top: solid 10px #764ba2;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+    border-bottom: solid 0px transparent;
+    transform: translateX(-50%);
+  }
+  @keyframes jump {
+    0% {
+      transform: translate(calc(-50% - 1px), -5px);
+    }
+    50% {
+      transform: translate(calc(-50% - 1px), 0px);
+    }
+    100% {
+      transform: translate(calc(-50% - 1px), -5px);
+    }
+  }
+  #shadow--left {
+    top: 340px;
+    left: -1px;
+    width: 1px;
+    content: "";
+    z-index: 100;
+    position: fixed;
+    border-radius: 50% 50%;
+    height: calc(100% - 340px);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 140px 70px rgba( 255, 255, 255, 1);
+  }
+  #shadow--right {
+    top: 340px;
+    right: -1px;
+    width: 1px;
+    content: "";
+    z-index: 100;
+    position: fixed;
+    border-radius: 50% 50%;
+    height: calc(100% - 340px);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 140px 70px rgba( 255, 255, 255, 1);
+  }
+  #checar {
+    top: 297px;
+    right: 20px;
+    z-index: 300;
+    width: 110px;
+    height: 46px;
+    line-height: 30px;
+    font-weight: bold;
+    position: absolute;
+    padding-left: 17px;
+    padding-right: 17px;
+    background: white;
+    color: rgb( 109, 103, 201);
+    box-shadow: 0px 0px 20px rgba( 1, 1, 1, 0.1);
+  }
+  #horario-display {
+    top: 301px;
+    left: 20px;
+    height: 46px;
+    z-index: 300;
+    color: white;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+    padding-left: 17px;
+    padding-right: 17px;
+    position: absolute;
+    width: calc( 100% - 190px);
+    box-shadow: 0px 0px 20px rgba( 1, 1, 1, 0.2);
+    background-image: linear-gradient(left, #667eea 0%, #764ba2 100%);
+  }
+  #horario-display:before {
+    top: 0px;
+    content: "";
+    right: -45px;
+    position: absolute;
+    border: solid 23px #764ba2;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+  }
+}
